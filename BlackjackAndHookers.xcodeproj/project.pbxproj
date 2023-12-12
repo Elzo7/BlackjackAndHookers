@@ -14,6 +14,10 @@
 		3FA016922B28B1E50063F3DD /* BlackjackAndHookersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016912B28B1E50063F3DD /* BlackjackAndHookersTests.swift */; };
 		3FA0169C2B28B1E50063F3DD /* BlackjackAndHookersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0169B2B28B1E50063F3DD /* BlackjackAndHookersUITests.swift */; };
 		3FA0169E2B28B1E50063F3DD /* BlackjackAndHookersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0169D2B28B1E50063F3DD /* BlackjackAndHookersUITestsLaunchTests.swift */; };
+		3FA016AB2B28B4970063F3DD /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016AA2B28B4970063F3DD /* TitleScreen.swift */; };
+		3FA016AD2B28B7370063F3DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016AC2B28B7370063F3DD /* CardView.swift */; };
+		3FA016AF2B28BF140063F3DD /* BlackjackGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016AE2B28BF140063F3DD /* BlackjackGameView.swift */; };
+		3FA016B12B28C57D0063F3DD /* BlackjackGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016B02B28C57D0063F3DD /* BlackjackGameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		3FA016972B28B1E50063F3DD /* BlackjackAndHookersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackAndHookersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA0169B2B28B1E50063F3DD /* BlackjackAndHookersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackAndHookersUITests.swift; sourceTree = "<group>"; };
 		3FA0169D2B28B1E50063F3DD /* BlackjackAndHookersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackAndHookersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FA016AA2B28B4970063F3DD /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		3FA016AC2B28B7370063F3DD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3FA016AE2B28BF140063F3DD /* BlackjackGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameView.swift; sourceTree = "<group>"; };
+		3FA016B02B28C57D0063F3DD /* BlackjackGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 			children = (
 				3FA016802B28B1E40063F3DD /* BlackjackAndHookersApp.swift */,
 				3FA016822B28B1E40063F3DD /* ContentView.swift */,
+				3FA016AA2B28B4970063F3DD /* TitleScreen.swift */,
+				3FA016AC2B28B7370063F3DD /* CardView.swift */,
+				3FA016AE2B28BF140063F3DD /* BlackjackGameView.swift */,
+				3FA016B02B28C57D0063F3DD /* BlackjackGameViewModel.swift */,
 				3FA016842B28B1E50063F3DD /* Assets.xcassets */,
 				3FA016862B28B1E50063F3DD /* Preview Content */,
 			);
@@ -258,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FA016832B28B1E40063F3DD /* ContentView.swift in Sources */,
+				3FA016AF2B28BF140063F3DD /* BlackjackGameView.swift in Sources */,
 				3FA016812B28B1E40063F3DD /* BlackjackAndHookersApp.swift in Sources */,
+				3FA016B12B28C57D0063F3DD /* BlackjackGameViewModel.swift in Sources */,
+				3FA016AD2B28B7370063F3DD /* CardView.swift in Sources */,
+				3FA016AB2B28B4970063F3DD /* TitleScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
