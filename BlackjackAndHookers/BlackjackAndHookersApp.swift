@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct BlackjackAndHookersApp: App {
+    
+    @StateObject var viewmodel = BlackjackGameViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewmodel:viewmodel)
         }
     }
 }

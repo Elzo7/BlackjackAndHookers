@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject
+    var viewmodel:BlackjackGameViewModel
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack{
+            Text("Dealer").font(.title)
+            Spacer()
+            HStack {
+                CardView(card: BlackjackGameModel.Card(id: "1", value: "2", suit: "c", inside: "🂲"))        }
+            .padding()
+            Spacer()
+            Text("Player").font(.title)
         }
-        .padding()
+        
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewmodel: BlackjackGameViewModel())
 }

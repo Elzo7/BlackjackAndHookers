@@ -18,6 +18,7 @@
 		3FA016AD2B28B7370063F3DD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016AC2B28B7370063F3DD /* CardView.swift */; };
 		3FA016AF2B28BF140063F3DD /* BlackjackGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016AE2B28BF140063F3DD /* BlackjackGameView.swift */; };
 		3FA016B12B28C57D0063F3DD /* BlackjackGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA016B02B28C57D0063F3DD /* BlackjackGameViewModel.swift */; };
+		3FD729652B31EE4F00DABFE8 /* DeckVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD729642B31EE4F00DABFE8 /* DeckVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		3FA016AC2B28B7370063F3DD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3FA016AE2B28BF140063F3DD /* BlackjackGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameView.swift; sourceTree = "<group>"; };
 		3FA016B02B28C57D0063F3DD /* BlackjackGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameViewModel.swift; sourceTree = "<group>"; };
+		3FD729642B31EE4F00DABFE8 /* DeckVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				3FA016B02B28C57D0063F3DD /* BlackjackGameViewModel.swift */,
 				3FA016842B28B1E50063F3DD /* Assets.xcassets */,
 				3FA016862B28B1E50063F3DD /* Preview Content */,
+				3FD729642B31EE4F00DABFE8 /* DeckVIew.swift */,
 			);
 			path = BlackjackAndHookers;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				3FA016832B28B1E40063F3DD /* ContentView.swift in Sources */,
 				3FA016AF2B28BF140063F3DD /* BlackjackGameView.swift in Sources */,
+				3FD729652B31EE4F00DABFE8 /* DeckVIew.swift in Sources */,
 				3FA016812B28B1E40063F3DD /* BlackjackAndHookersApp.swift in Sources */,
 				3FA016B12B28C57D0063F3DD /* BlackjackGameViewModel.swift in Sources */,
 				3FA016AD2B28B7370063F3DD /* CardView.swift in Sources */,

@@ -8,21 +8,29 @@
 import SwiftUI
 
 struct CardView: View {
-    var isPressed = false
+    var card: BlackjackGameModel.Card
     var body: some View {
-        /*ZStack{
-            Text("🂠").font(.system(size: 200)).foregroundStyle(.red)
-            Text("🃗").font(.system(size: 200)).opacity(0)
-        }*/
+       
         ZStack{
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.white)
-                .stroke(Color.black)
-                .frame(width: 128,height: 198)
+            let cardBack = Rectangle()
+            Group
+            {
+                cardBack
+                    .fill(.white)
+                    .stroke(card.suit == "w" || card.suit == "z" ? .black : .red)
+                    .frame(width: 115,height: 158)
+                Text(card.inside).font(.system(size: 200)).foregroundColor(card.suit == "w" || card.suit == "z" ? .black : .red).offset(CGSize(width: 0, height: -19))
+            }.opacity(1)
+            Group{
+                cardBack.fill(.red)
+                    .frame(width: 115,height:158)
+                Text("🂠").font(.system(size: 200)).foregroundColor(.white)
+                    .offset(CGSize(width: 0, height: -19))
+            }.opacity(0)
         }
     }
 }
 
 #Preview {
-    CardView()
+    CardView(card: BlackjackGameModel.Card(id: "7w", value: "7",suit: "w",inside: "🃑"))
 }
