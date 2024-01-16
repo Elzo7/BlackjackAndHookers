@@ -8,17 +8,36 @@
 import Foundation
 class BlackjackGameViewModel:ObservableObject
 {
-    static var suits = ["c","d","w","z"]
-    static var values = ["A","2","3","4","5","6","7","8","9","10","J","D","K"]
-    static var inside = ["🂱","🃂","🂣","🃔","🂵","🃆","🂧","🃘","🂹","🃊","🂫","🃝","🂾","🃁","🂢","🃓","🂴","🂵","🂦","🃗","🂸","🃉","🂪","🃛","🂽","🃎","🂡","🃒","🂳","🃄","🂥","🃖","🂷","🃈","🂩","🃚","🂻","🃍","🂮","🃑","🂲","🃃","🂤","🃕","🂶","🃇","🂨","🃙","🂺","🃋","🂭","🃞"]
-    var cardDeck:Array<BlackjackGameModel.Card>
-    {
-        return model.cardDeck
+    @Published var playerScore:Int = 0
+    @Published var dealerScore:Int = 0
+    @Published var model = create_model()
+    @Published var result:String = ""
+    @Published var gameEnded:Bool = false
+    static func create_model()->BlackjackGameModel{
+        return BlackjackGameModel(user:Player(),dealer:Player())
     }
-    private static  func createModel()->BlackjackGameModel
-    {
-        return BlackjackGameModel(suits: suits, values: values,inside: inside)
+    init() {
+        playerScore=model.user.calculateScore()
+        dealerScore=model.dealer.hand[0].rank.setValue == 1 ? 11 : model.dealer.hand[0].rank.setValue
     }
-    @Published
-    var model=createModel()
+    func hit(){
+        model.hit(player: model.user)
+        playerScore=model.user.calculateScore()
+        if playerScore > 21{
+            stand()
+        }
+    }
+    func stand(){
+        model.stand()
+        dealerScore=model.dealer.calculateScore()
+        result=model.checkWinner()
+        gameEnded=true
+    }
+    func reset(){
+        result = ""
+        gameEnded = false
+        model.startGame()
+        playerScore = model.user.calculateScore()
+        dealerScore = model.dealer.hand[0].rank.setValue
+    }
 }

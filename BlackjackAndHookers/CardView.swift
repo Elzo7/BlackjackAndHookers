@@ -8,29 +8,16 @@
 import SwiftUI
 
 struct CardView: View {
-    var card: BlackjackGameModel.Card
+    var image_name:String
     var body: some View {
-       
-        ZStack{
-            let cardBack = Rectangle()
-            Group
-            {
-                cardBack
-                    .fill(.white)
-                    .stroke(card.suit == "w" || card.suit == "z" ? .black : .red)
-                    .frame(width: 115,height: 158)
-                Text(card.inside).font(.system(size: 200)).foregroundColor(card.suit == "w" || card.suit == "z" ? .black : .red).offset(CGSize(width: 0, height: -19))
-            }.opacity(1)
-            Group{
-                cardBack.fill(.red)
-                    .frame(width: 115,height:158)
-                Text("🂠").font(.system(size: 200)).foregroundColor(.white)
-                    .offset(CGSize(width: 0, height: -19))
-            }.opacity(0)
-        }
+        Image(image_name)
+            .resizable()
+            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 150)
+            .shadow(radius: 3,x:2,y:2)
+        
     }
 }
 
 #Preview {
-    CardView(card: BlackjackGameModel.Card(id: "7w", value: "7",suit: "w",inside: "🃑"))
+    CardView(image_name: "nine_trefl")
 }
